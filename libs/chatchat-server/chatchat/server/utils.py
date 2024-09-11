@@ -199,6 +199,7 @@ def get_model_info(
 
 def get_default_llm():
     available_llms = list(get_config_models(model_type="llm").keys())
+    available_llms.append("qwen2-vl-instruct")
     if Settings.model_settings.DEFAULT_LLM_MODEL in available_llms:
         return Settings.model_settings.DEFAULT_LLM_MODEL
     else:
